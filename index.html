@@ -1,46 +1,67 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
-<title>Althea's ART74 Demo Site</title>
+    <title>Althea's ART74 Demo Site</title>
 
-<style>
-    h1 {
-        width: 8em;
-        float: left;
-        color: red;
-        font-size: 150%;
-        padding: 0 10px 0 0;
-        margin: 0 0 10px 0;
-    }
+    <style>
+        h1 {
+            width: 8em;
+            color: red;
+            font-size: 150%;
+        }
 
-    p {
-        padding: 0 0 0 20px;
-    }
+        a:hover {
+            color: cornsilk
+        }
 
-    a:hover {
-        color:cornsilk
-    }
+        a:visited {
+            color: fuchsia
+        }
 
-    a:visited {
-        color:fuchsia
-    }
+        p:hover {
+            color: yellowgreen
+        }
 
-    p:hover {
-        color:yellowgreen
-    }
+        .layout {
+            display: flex;
+        }
 
-</style>
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 250px;
+            padding: 20px
+        }
+    </style>
 
 </head>
+
 <body>
 
-<h1>Kill Not The Moth nor Butterfly</h1>
-<p>He who shall train the horse to war</p>
-<p>Shall never <a href="pages/page_1.html">pass</a> the <a href="moon/moon_index.html">polar</a> bar.</p>
+    <div class="layout">
+        <header class="sidebar">
+            <h1>Kill Not The Moth nor Butterfly</h1>
+        </header>
+    
 
-<img src="images/moth.png" alt="google search result of the keyword 'moth' and colorful moths thumbnails are displayed across an approximately 16:9 screenshot" style="width:100%;">
+    <main class="content">
+        <p>He who shall train the horse to war</p>
+        <p>Shall never <a href="pages/page_1.html">pass</a> the <a href="moon/moon_index.html">polar</a> bar.</p>
 
-<!--This is a comment. Comments are not displayed in the browser-->
+        <img src="images/moth.png"
+            alt="google search result of the keyword 'moth' and colorful moths thumbnails are displayed across an approximately 16:9 screenshot"
+            style="width:100%;">
+    </main>
+    </div>
+
+
+
+    <!--This is a comment. Comments are not displayed in the browser-->
 
 </body>
-</html> 
+
+</html>
