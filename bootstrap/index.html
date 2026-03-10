@@ -3,35 +3,75 @@
 
 <head>
     <title>Althea's ART74 Demo Site - Bootstrap</title>
+    <meta charset="utf-8">
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
 <body>
 
 
-    <div>
+    <div class="container-fluid">
         <header>
-            <h1>Kill Not The Moth nor Butterfly</h1>
-        </header>
+            <div class="mt-4 p-5 text-white rounded text-center" style="background-color: salmon;">
+                <h1>Kill Not The Moth nor Butterfly</h1>
+            </div>
 
+        </header>
 
         <main>
 
-            <ul style="list-style-type:circle;">
-                <li><a href="page_1.html">The Caterpillar On The Leaf</a></li>
-                <li><a href="page_2.html">William Blake</a></li>
-            </ul>
+            <nav class="navbar navbar-expand-sm bg-light">
+                <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"> <a class="nav-link" href="page_1.html">The Caterpillar On The Leaf</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="page_2.html">William Blake</a></li>
+                    </ul>
 
-            <p>He who shall train the horse to war</p>
-            <p>Shall never <a href="../index.html">pass</a> the <a href="page_1.html">polar</a> bar.</p>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#home">Moth</a>
+                        </li>
+                        <li class="Round">
+                            <a class="nav-link" data-bs-toggle="tab" href="#Round">Round</a>
+                        </li>
+                        <li class="Cat">
+                            <a class="nav-link" data-bs-toggle="tab" href="#Cat">Cat</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                    <h3>MOTH</h3>
+                    <img src="../images/moth.png" class="rounded-circle"
+                        alt="google search result of the keyword 'moth' and colorful moths thumbnails are displayed across an approximately 16:9 screenshot"
+                        style="width:50%;">
+                    <p>He who shall train the horse to war</p>
+                </div>
+                <div id="Round" class="container tab-pane fade"><br>
+                    <h3>Round</h3>
+                    <img src="../images/round.png" class="img-thumbnail" alt="a british shorthair" style="width:50%;">
+                    <p>Shall never <a href="../index.html">pass</a> the <a href="page_1.html">polar</a> bar.</p>
+                </div>
+                <div id="Cat" class="container tab-pane fade"><br>
+                    <h3>Cat</h3>
+                    <img src="../images/cat.jpg" class="img-thumbnail" alt="a british shorthair" style="width:50%;">
+                </div>
+            </div>
 
-            <img src="../images/moth.png"
-                alt="google search result of the keyword 'moth' and colorful moths thumbnails are displayed across an approximately 16:9 screenshot"
-                style="width:100%;">
+
         </main>
     </div>
-
-
 
     <!--This is a comment. Comments are not displayed in the browser-->
 
