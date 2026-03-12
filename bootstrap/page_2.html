@@ -3,25 +3,58 @@
 
 <head>
     <title>Bootstrap - William Blake</title>
+
+    
+
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            overflow-y: auto;
+            /* scrolls if sidebar content is too long */
+            flex-shrink: 0;
+            background-color: bisque;
+        }
+
+        .main-content {
+            flex: 1;
+            overflow-y: auto;
+            /* this part scrolls */
+            padding: 20px;
+            background-color:antiquewhite;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Auguries of Innocense</h1>
-    <ul style="list-style-type:circle;">
-        <li><a href="index.html">Not The Moth nor Butterfly</a></li>
-        <li><a href="page_1.html">The Caterpillar On The Leaf</a></li>
-    </ul>
-    <p>To see a world in a <a href="../index.html">grain</a> of sand</p>
-    <p>And a heaven in a wild flower,</p>
-    <p>Hold <a href="index.html">infinity</a> in the palm of your hand</p>
-    <p>And eternity in an hour.</p>
-    <p><a href="https://www.poetryfoundation.org/poems/43650/auguries-of-innocence" target="_blank">William Blake,
-            "Auguries of Innocence" from Poems, ed. Dante Gabriel Rossetti (1863).</a></p>
+    <div class="sidebar">
+        <h1>Auguries of Innocense</h1>
+        <ul style="list-style-type:circle;">
+            <li><a href="index.html">Not The Moth nor Butterfly</a></li>
+            <li><a href="page_1.html">The Caterpillar On The Leaf</a></li>
+        </ul>
+    </div>
 
-    <img src="../images/blake.jpg"
-        alt="painted portait of william blake, a caucasian male in navy jacket holding a pen in his right hand looking contemplative to top right of frame"
-        style="width:100%;">
+    <div class="main-content">
+        <p>To see a world in a <a href="../index.html">grain</a> of sand</p>
+        <p>And a heaven in a wild flower,</p>
+        <p>Hold <a href="index.html">infinity</a> in the palm of your hand</p>
+        <p>And eternity in an hour.</p>
+        <p><a href="https://www.poetryfoundation.org/poems/43650/auguries-of-innocence" target="_blank">William Blake,
+                "Auguries of Innocence" from Poems, ed. Dante Gabriel Rossetti (1863).</a></p>
+
+        <img src="../images/blake.jpg"
+            alt="painted portait of william blake, a caucasian male in navy jacket holding a pen in his right hand looking contemplative to top right of frame"
+            style="width:100%;">
+    </div>
+
 
 </body>
 
