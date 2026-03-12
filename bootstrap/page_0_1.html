@@ -9,12 +9,26 @@
             background-image: url("../images/moth-glitched.png");
             background-size: 20%;
             /*fills the whole screen*/
-            background-position: 320px 300px; 
-                /*centers the image*/
+            background-position: 320px 300px;
+            /*centers the image*/
             ;
             background-repeat: no-repeat;
             min-height: 500px;
             /*ensures the body is always at least as tall as the browser window*/
+        }
+
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+        }
+
+        .scroll-container img {
+            height: 300px;
+            /* fixed height */
+            width: auto;
+            flex-shrink: 0;
+            /* prevents images from shrinking */
         }
     </style>
 
@@ -56,7 +70,35 @@
         <button>Enter</button>
     </div>
 
+    <div class="scroll-container">
+        <img src="../images/cat.jpg">
+        <img src="../images/moth.png">
+        <img src="../images/round.png">
+        <img src="../images/blake.jpg">
+    </div>
 
+    <script>
+        const container = document.querySelector('.scroll-container');
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            container.scrollLeft += e.deltaY;
+        });
+    </script>
+
+<!--⏺ const container = document.querySelector('.scroll-container');                
+  Finds the element with class scroll-container and stores it in a variable.    
+                                                                                
+  container.addEventListener('wheel', (e) => {
+  Listens for the scroll wheel event on that element. e is the event object     
+  (contains info about what happened).
+
+      e.preventDefault();
+  Stops the default behavior — which would be scrolling the page vertically.
+
+      container.scrollLeft += e.deltaY;
+  Instead, moves the container horizontally. scrollLeft is how far the container
+   is scrolled to the right. e.deltaY is how much the wheel moved — adding it to
+   scrollLeft converts vertical wheel movement into horizontal scrolling.-->
 
 </body>
 
